@@ -1,0 +1,1 @@
+this is just brainstormed ideas for the primitive isolation mod, becuase something is in this file doesnt not mean it will be implemented.

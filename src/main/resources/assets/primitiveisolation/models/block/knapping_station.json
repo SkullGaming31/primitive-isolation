@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/oak_planks",
+    "up": "primitiveisolation:block/knapping_station_top",
+    "north": "primitiveisolation:block/knapping_station_front",
+    "south": "primitiveisolation:block/knapping_station_side",
+    "east": "primitiveisolation:block/knapping_station_side",
+    "west": "primitiveisolation:block/knapping_station_side",
+    "particle": "primitiveisolation:block/knapping_station_side"
+  }
+}

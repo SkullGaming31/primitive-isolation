@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "D D",
+    " F ",
+    "D D"
+  ],
+  "key": {
+    "D": "minecraft:dirt",
+    "F": "minecraft:flint"
+  },
+  "result": {
+    "id": "primitiveisolation:charcoal_pit",
+    "count": 1
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "primitiveisolation:block/butchery_table",
+  "textures": {
+    "up": "primitiveisolation:block/butchery_table_top_cow"
+  }
+}

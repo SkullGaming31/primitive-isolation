@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "carcass=empty": {
+      "model": "primitiveisolation:block/butchery_table"
+    },
+    "carcass=cow": {
+      "model": "primitiveisolation:block/butchery_table_cow"
+    },
+    "carcass=pig": {
+      "model": "primitiveisolation:block/butchery_table_pig"
+    },
+    "carcass=chicken": {
+      "model": "primitiveisolation:block/butchery_table_chicken"
+    }
+  }
+}

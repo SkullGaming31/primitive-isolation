@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/oak_planks",
+    "up": "primitiveisolation:block/butchery_table_top",
+    "north": "primitiveisolation:block/butchery_table_front",
+    "south": "primitiveisolation:block/butchery_table_side",
+    "east": "primitiveisolation:block/butchery_table_side",
+    "west": "primitiveisolation:block/butchery_table_side",
+    "particle": "primitiveisolation:block/butchery_table_side"
+  }
+}

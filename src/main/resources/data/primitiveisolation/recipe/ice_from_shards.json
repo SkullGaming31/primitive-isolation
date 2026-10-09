@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SSS",
+    "SNS",
+    "SSS"
+  ],
+  "key": {
+    "S": "primitiveisolation:ice_shard",
+    "N": "minecraft:snow_block"
+  },
+  "result": {
+    "id": "minecraft:ice",
+    "count": 1
+  }
+}

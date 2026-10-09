@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=false": {
+      "model": "primitiveisolation:block/charcoal_pit"
+    },
+    "active=true": {
+      "model": "primitiveisolation:block/charcoal_pit"
+    }
+  }
+}

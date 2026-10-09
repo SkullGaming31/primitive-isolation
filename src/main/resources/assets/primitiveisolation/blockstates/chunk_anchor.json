@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "primitiveisolation:block/chunk_anchor"
+    }
+  }
+}

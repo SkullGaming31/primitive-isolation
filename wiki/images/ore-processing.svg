@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 310" role="img" aria-labelledby="title description">
+  <title id="title">Ore processing recipes</title>
+  <desc id="description">Smelt or blast raw ore and ore blocks to receive one nugget, with reduced experience.</desc>
+  <rect width="1080" height="310" rx="18" fill="#17212b"/>
+  <text x="24" y="36" fill="#f4eee1" font-family="Arial, sans-serif" font-size="24" font-weight="700">ORE PROCESSING</text>
+  <text x="24" y="57" fill="#b9c4ce" font-family="Arial, sans-serif" font-size="13">Smelting and blasting produce one nugget instead of one ingot.</text>
+
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(18 76)">
+      <rect width="336" height="210" rx="12" fill="#f4eee1"/>
+      <text x="168" y="29" text-anchor="middle" fill="#17212b" font-size="18" font-weight="700">IRON</text>
+      <text x="20" y="60" fill="#596876" font-size="13" font-weight="700">INPUTS</text>
+      <text x="20" y="82" fill="#17212b" font-size="13">Raw iron, iron ore, deepslate iron ore</text>
+      <rect x="21" y="106" width="103" height="52" rx="8" fill="#d6d0c5"/>
+      <text x="72" y="128" text-anchor="middle" fill="#17212b" font-size="13" font-weight="700">FURNACE</text>
+      <text x="72" y="147" text-anchor="middle" fill="#596876" font-size="11">or blast furnace</text>
+      <path d="M137 132h49m-9-8 9 8-9 8" fill="none" stroke="#17212b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M211 117l9-10 9 10v17h-18z" fill="#c5a05b" stroke="#8d6b32" stroke-width="2"/>
+      <text x="242" y="129" fill="#17212b" font-size="14" font-weight="700">1 iron nugget</text>
+      <text x="20" y="187" fill="#17212b" font-size="13">200 ticks furnace / 100 blast</text>
+      <text x="316" y="187" text-anchor="end" fill="#596876" font-size="13" font-weight="700">0.35 XP</text>
+    </g>
+    <g transform="translate(372 76)">
+      <rect width="336" height="210" rx="12" fill="#f4eee1"/>
+      <text x="168" y="29" text-anchor="middle" fill="#17212b" font-size="18" font-weight="700">GOLD</text>
+      <text x="20" y="60" fill="#596876" font-size="13" font-weight="700">INPUTS</text>
+      <text x="20" y="82" fill="#17212b" font-size="12">Raw gold, gold ore, deepslate gold ore,</text>
+      <text x="20" y="99" fill="#17212b" font-size="12">nether gold ore</text>
+      <rect x="21" y="115" width="103" height="52" rx="8" fill="#d6d0c5"/>
+      <text x="72" y="137" text-anchor="middle" fill="#17212b" font-size="13" font-weight="700">FURNACE</text>
+      <text x="72" y="156" text-anchor="middle" fill="#596876" font-size="11">or blast furnace</text>
+      <path d="M137 141h49m-9-8 9 8-9 8" fill="none" stroke="#17212b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M211 126l9-10 9 10v17h-18z" fill="#e3bd39" stroke="#ad841a" stroke-width="2"/>
+      <text x="242" y="138" fill="#17212b" font-size="14" font-weight="700">1 gold nugget</text>
+      <text x="20" y="195" fill="#17212b" font-size="13">200 ticks furnace / 100 blast</text>
+      <text x="316" y="195" text-anchor="end" fill="#596876" font-size="13" font-weight="700">0.5 XP</text>
+    </g>
+    <g transform="translate(726 76)">
+      <rect width="336" height="210" rx="12" fill="#f4eee1"/>
+      <text x="168" y="29" text-anchor="middle" fill="#17212b" font-size="18" font-weight="700">COPPER</text>
+      <text x="20" y="60" fill="#596876" font-size="13" font-weight="700">INPUTS</text>
+      <text x="20" y="82" fill="#17212b" font-size="13">Raw copper, copper ore, deepslate copper ore</text>
+      <rect x="21" y="106" width="103" height="52" rx="8" fill="#d6d0c5"/>
+      <text x="72" y="128" text-anchor="middle" fill="#17212b" font-size="13" font-weight="700">FURNACE</text>
+      <text x="72" y="147" text-anchor="middle" fill="#596876" font-size="11">or blast furnace</text>
+      <path d="M137 132h49m-9-8 9 8-9 8" fill="none" stroke="#17212b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M211 117l9-10 9 10v17h-18z" fill="#c5794c" stroke="#95502e" stroke-width="2"/>
+      <text x="242" y="129" fill="#17212b" font-size="14" font-weight="700">1 copper nugget</text>
+      <text x="20" y="187" fill="#17212b" font-size="13">200 ticks furnace / 100 blast</text>
+      <text x="316" y="187" text-anchor="end" fill="#596876" font-size="13" font-weight="700">0.35 XP</text>
+    </g>
+  </g>
+</svg>

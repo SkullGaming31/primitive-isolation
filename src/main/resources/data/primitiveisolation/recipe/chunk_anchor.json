@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "III",
+    "IEI",
+    "III"
+  ],
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "E": "minecraft:ender_eye"
+  },
+  "result": {
+    "id": "primitiveisolation:chunk_anchor",
+    "count": 1
+  }
+}

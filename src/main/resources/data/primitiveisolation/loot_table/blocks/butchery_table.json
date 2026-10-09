@@ -1,0 +1,68 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "primitiveisolation:butchery_table"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "primitiveisolation:cow_carcass",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "primitiveisolation:butchery_table",
+              "properties": {
+                "carcass": "cow"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "primitiveisolation:pig_carcass",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "primitiveisolation:butchery_table",
+              "properties": {
+                "carcass": "pig"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "primitiveisolation:chicken_carcass",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "primitiveisolation:butchery_table",
+              "properties": {
+                "carcass": "chicken"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

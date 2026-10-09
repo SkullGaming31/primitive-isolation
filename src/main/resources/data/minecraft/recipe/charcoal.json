@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.15,
+  "ingredient": "#primitiveisolation:no_charcoal_smelting",
+  "result": {
+    "id": "minecraft:charcoal"
+  }
+}
