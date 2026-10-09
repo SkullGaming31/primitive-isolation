@@ -105,3 +105,5 @@ Furnace recipes take 200 game ticks; blast furnace recipes take 100 game ticks. 
 ## Miscellaneous features
 
 Lit campfires can start normal fire beside an adjacent flammable wood block. Each adjacent wooden block has an independent chance to ignite, averaging about once per minute while the campfire is lit. Keep campfires away from wooden structures.
+
+Zombies will attack cows, pigs, and chickens.
