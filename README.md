@@ -1,7 +1,7 @@
 
 ## Mod Wiki
 
-See the [Recipe Wiki](wiki/recipes.md) for the knapping station recipes and ore processing changes.
+See the [Recipe Wiki](https://github.com/SkullGaming31/primitive-isolation/wiki) for recipes and other misc features.
 
 ## Acknowledgment
 
