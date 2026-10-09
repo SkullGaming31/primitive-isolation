@@ -53,18 +53,18 @@ Craft a **Charcoal Pit Core** from 4 dirt and 1 flint (`D.D / .F. / D.D`). Place
 
 Use flint and steel on the core to start the pit. Right-click an active core to check its remaining time. It consumes the logs and yields 1 charcoal per log after 150 ticks per log. Logs can no longer be smelted into charcoal; the charcoal pit is the intended source. A core lasts for a randomly determined **1–10 completed runs**, then burns out and is destroyed.
 
-Lit campfires can start normal fire beside an adjacent flammable wood block. Each adjacent wooden block has an independent chance to ignite, averaging about once per minute while the campfire is lit. Keep campfires away from wooden structures.
-
-## Chunk Anchor
-
-Craft a **Chunk Anchor** with an Eye of Ender in the center and iron ingots in all eight surrounding crafting slots. By default, right-click it with an Ender Pearl to fuel one hour of loading for its chunk; additional pearls add another hour. The `chunkAnchorRequiresFuel` common config option defaults to `true`; set it to `false` to keep chunks with Chunk Anchors loaded without fuel. Each anchor affects only its own chunk, and removing the last active anchor stops forcing that chunk to stay loaded.
-
 | Pit size | Logs | Charcoal | Time |
 | --- | ---: | ---: | ---: |
 | 3x3 | 8 | 8 | 60 seconds |
 | 5x5 | 24 | 24 | 3 minutes |
 | 7x7 | 48 | 48 | 6 minutes |
 | 9x9 | 80 | 80 | 10 minutes |
+
+Lit campfires can start normal fire beside an adjacent flammable wood block. Each adjacent wooden block has an independent chance to ignite, averaging about once per minute while the campfire is lit. Keep campfires away from wooden structures.
+
+## Chunk Anchor
+
+Craft a **Chunk Anchor** with an Eye of Ender in the center and iron ingots in all eight surrounding crafting slots. By default, right-click it with an Ender Pearl to fuel one hour of loading for its chunk; additional pearls add another hour. The `chunkAnchorRequiresFuel` common config option defaults to `true`; set it to `false` to keep chunks with Chunk Anchors loaded without fuel. Each anchor affects only its own chunk, and removing the last active anchor stops forcing that chunk to stay loaded.
 
 ## Food spoilage and preservation
 
