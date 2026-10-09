@@ -5,26 +5,26 @@ add a food item to squids after they die?
 
 ## Minecraft Animals and Mobs to be added to the butching system
 
-Cow — Raw Beef DONE
-Mooshroom — Raw Beef
-Pig — Raw Porkchop DONE
-Sheep — Raw Mutton
-Chicken — Raw Chicken, Feather DONE
-Rabbit — Raw Rabbit
-Cod — Raw Cod DONE
-Salmon — Raw Salmon DONE
-Tropical Fish — Tropical Fish DONE
-Pufferfish — Pufferfish DONE
-Polar Bear — Raw Cod, Raw Salmon
-Dolphin — Raw Cod
-Hoglin — Raw Porkchop
+* Cow — Raw Beef DONE
+* Mooshroom — Raw Beef
+* Pig — Raw Porkchop DONE
+* Sheep — Raw Mutton
+* Chicken — Raw Chicken, Feather DONE
+* Rabbit — Raw Rabbit
+* Cod — Raw Cod DONE
+* Salmon — Raw Salmon DONE
+* Tropical Fish — Tropical Fish DONE
+* Pufferfish — Pufferfish DONE
+* Polar Bear — Raw Cod, Raw Salmon
+* Dolphin — Raw Cod
+* Hoglin — Raw Porkchop
 
-polar bears:
+**Polar Bears**:
 Randomly drops either cod (75% chance) or salmon (25% chance), with 0–2 fish normally. It does not drop both types from the same kill
 
 these need to be added to the butching system
 
-## Minecraft Animals That Drop Leather
+## Minecraft Animals That Drop Leather to be added to the tannery system
 
 * Cow — 0–2 Leather DONE
 * Mooshroom — 0–2 Leather
