@@ -200,7 +200,7 @@ public class primitiveisolation {
     public static final DeferredHolder<EntityType<?>, EntityType<Moose>> MOOSE = ENTITY_TYPES.register(
             "moose",
             id -> EntityType.Builder.of(Moose::new, MobCategory.CREATURE)
-                    .sized(3.1666667F, 4.8333335F)
+                    .sized(2.4F, 3.4F)
                     .clientTrackingRange(10)
                     .updateInterval(3)
                     .noLootTable()
@@ -216,7 +216,7 @@ public class primitiveisolation {
     public static final DeferredHolder<EntityType<?>, EntityType<MooseCorpse>> MOOSE_CORPSE = ENTITY_TYPES.register(
             "moose_corpse",
             id -> EntityType.Builder.of(MooseCorpse::new, MobCategory.MISC)
-                    .sized(3.1666667F, 4.8333335F)
+                    .sized(2.4F, 3.4F)
                     .clientTrackingRange(10)
                     .updateInterval(3)
                     .noLootTable()
