@@ -1,8 +1,5 @@
 package com.canadiendragon.primitiveisolation;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.world.SimpleContainer;
@@ -13,15 +10,8 @@ import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 
 public class KnappingStationMenu extends AbstractContainerMenu {
-    private static final String[] AXE_HEAD_PATTERN = {"FF ", "FS ", "   "};
-    private static final String[] PICKAXE_HEAD_PATTERN = {"FFF", " S ", "   "};
-    private static final String[] HOE_HEAD_PATTERN = {"FF ", "S  ", "   "};
-    private static final String[] SHOVEL_HEAD_PATTERN = {"F  ", "S  ", "   "};
-    private static final String[] KNIFE_HEAD_PATTERN = {"FS ", "   ", "   "};
-
     private final Inventory playerInventory;
     private final ContainerLevelAccess access;
     private final SimpleContainer input = new SimpleContainer(9);
@@ -132,60 +122,25 @@ public class KnappingStationMenu extends AbstractContainerMenu {
     }
 
     private RecipeMatch findMatch() {
-        RecipeMatch match = this.matchPattern(AXE_HEAD_PATTERN, primitiveisolation.FLINT_AXE_HEAD.get());
-        if (match == null) {
-            match = this.matchPattern(PICKAXE_HEAD_PATTERN, primitiveisolation.FLINT_PICKAXE_HEAD.get());
+        for (KnappingRecipes.PatternRecipe recipe : KnappingRecipes.HEADS) {
+            RecipeMatch match = this.matchPattern(recipe);
+            if (match != null) {
+                return match;
+            }
         }
-        if (match == null) {
-            match = this.matchPattern(HOE_HEAD_PATTERN, primitiveisolation.FLINT_HOE_HEAD.get());
+        for (KnappingRecipes.PatternRecipe recipe : KnappingRecipes.ASSEMBLIES) {
+            RecipeMatch match = this.matchPattern(recipe);
+            if (match != null) {
+                return match;
+            }
         }
-        if (match == null) {
-            match = this.matchPattern(SHOVEL_HEAD_PATTERN, primitiveisolation.FLINT_SHOVEL_HEAD.get());
-        }
-        if (match == null) {
-            match = this.matchPattern(KNIFE_HEAD_PATTERN, primitiveisolation.FLINT_KNIFE_HEAD.get());
-        }
-        if (match == null) {
-            match = this.matchShapeless(
-                    primitiveisolation.FLINT_AXE.get(),
-                    primitiveisolation.FLINT_AXE_HEAD.get(),
-                    Items.STICK,
-                    Items.STICK);
-        }
-        if (match == null) {
-            match = this.matchShapeless(
-                    primitiveisolation.FLINT_PICKAXE.get(),
-                    primitiveisolation.FLINT_PICKAXE_HEAD.get(),
-                    Items.STICK,
-                    Items.STICK);
-        }
-        if (match == null) {
-            match = this.matchShapeless(
-                    primitiveisolation.FLINT_HOE.get(),
-                    primitiveisolation.FLINT_HOE_HEAD.get(),
-                    Items.STICK,
-                    Items.STICK);
-        }
-        if (match == null) {
-            match = this.matchShapeless(
-                    primitiveisolation.FLINT_SHOVEL.get(),
-                    primitiveisolation.FLINT_SHOVEL_HEAD.get(),
-                    Items.STICK,
-                    Items.STICK);
-        }
-        if (match == null) {
-            match = this.matchShapeless(
-                    primitiveisolation.FLINT_KNIFE.get(),
-                    primitiveisolation.FLINT_KNIFE_HEAD.get(),
-                    Items.STICK);
-        }
-        return match;
+        return null;
     }
 
-    private RecipeMatch matchPattern(String[] pattern, Item result) {
+    private RecipeMatch matchPattern(KnappingRecipes.PatternRecipe recipe) {
         int[] consume = new int[9];
         for (int slot = 0; slot < 9; slot++) {
-            char symbol = pattern[slot / 3].charAt(slot % 3);
+            char symbol = recipe.pattern().get(slot / 3).charAt(slot % 3);
             ItemStack stack = this.input.getItem(slot);
             if (symbol == ' ') {
                 if (!stack.isEmpty()) {
@@ -194,41 +149,13 @@ public class KnappingStationMenu extends AbstractContainerMenu {
                 continue;
             }
 
-            Item expected = symbol == 'F' ? Items.FLINT : Items.STRING;
-            if (!stack.is(expected)) {
+            Item expected = recipe.key().get(symbol);
+            if (expected == null || !stack.is(expected)) {
                 return null;
             }
             consume[slot] = 1;
         }
-        return new RecipeMatch(result, consume);
-    }
-
-    private RecipeMatch matchShapeless(Item result, Item... ingredients) {
-        Map<Item, Integer> required = new HashMap<>();
-        for (Item ingredient : ingredients) {
-            required.merge(ingredient, 1, Integer::sum);
-        }
-
-        int[] consume = new int[9];
-        for (int slot = 0; slot < 9; slot++) {
-            ItemStack stack = this.input.getItem(slot);
-            if (stack.isEmpty()) {
-                continue;
-            }
-
-            Integer needed = required.get(stack.getItem());
-            if (needed == null) {
-                return null;
-            }
-            int used = Math.min(stack.getCount(), needed);
-            consume[slot] = used;
-            required.put(stack.getItem(), needed - used);
-        }
-
-        if (required.values().stream().anyMatch(count -> count > 0)) {
-            return null;
-        }
-        return new RecipeMatch(result, consume);
+        return new RecipeMatch(recipe.output(), consume);
     }
 
     private void consumeRecipe() {

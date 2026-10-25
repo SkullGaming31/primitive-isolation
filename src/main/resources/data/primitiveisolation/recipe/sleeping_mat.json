@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WWW",
+    "HHH"
+  ],
+  "key": {
+    "W": "#minecraft:wool",
+    "H": "minecraft:hay_block"
+  },
+  "result": {
+    "id": "primitiveisolation:sleeping_mat",
+    "count": 1
+  }
+}

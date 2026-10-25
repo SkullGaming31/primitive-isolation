@@ -18,7 +18,7 @@ import org.jspecify.annotations.Nullable;
 public class CharcoalPitBlockEntity extends BlockEntity {
     private static final int MIN_SIZE = 3;
     private static final int MAX_SIZE = 9;
-    private static final int TICKS_PER_LOG = 150;
+    public static final int TICKS_PER_LOG = 150;
     private static final int MIN_CORE_USES = 1;
     private static final int MAX_CORE_USES = 10;
     private int pitSize;

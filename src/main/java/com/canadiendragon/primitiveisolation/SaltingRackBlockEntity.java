@@ -254,6 +254,12 @@ public class SaltingRackBlockEntity extends BlockEntity implements MenuProvider 
         if (item == Items.CHICKEN || item == primitiveisolation.RAW_CHICKEN.get()) {
             return primitiveisolation.SALTED_CHICKEN.get();
         }
+        if (item == Items.MUTTON || item == primitiveisolation.RAW_MUTTON.get()) {
+            return primitiveisolation.SALTED_MUTTON.get();
+        }
+        if (item == Items.RABBIT || item == primitiveisolation.RAW_RABBIT.get()) {
+            return primitiveisolation.SALTED_RABBIT.get();
+        }
         if (item == Items.COD || item == primitiveisolation.RAW_COD.get()) {
             return primitiveisolation.SALTED_COD.get();
         }

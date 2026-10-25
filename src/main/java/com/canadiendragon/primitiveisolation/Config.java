@@ -25,6 +25,10 @@ public class Config {
             .comment("Whether Chunk Anchors require an Ender Pearl for one hour of chunk loading")
             .define("chunkAnchorRequiresFuel", true);
 
+    public static final ModConfigSpec.BooleanValue STRUCTURAL_INTEGRITY_ENABLED = BUILDER
+            .comment("Whether unsupported solid blocks collapse when their support is removed")
+            .define("structuralIntegrityEnabled", true);
+
     public static final ModConfigSpec.IntValue MAGIC_NUMBER = BUILDER
             .comment("A magic number")
             .defineInRange("magicNumber", 42, 0, Integer.MAX_VALUE);

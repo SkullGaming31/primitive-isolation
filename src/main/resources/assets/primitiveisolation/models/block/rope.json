@@ -1,0 +1,21 @@
+{
+  "textures": {
+    "side": "minecraft:block/scaffolding_side",
+    "end": "minecraft:block/scaffolding_top",
+    "particle": "minecraft:block/scaffolding_side"
+  },
+  "elements": [
+    {
+      "from": [6, 0, 6],
+      "to": [10, 16, 10],
+      "faces": {
+        "north": {"texture": "#side"},
+        "east": {"texture": "#side"},
+        "south": {"texture": "#side"},
+        "west": {"texture": "#side"},
+        "up": {"texture": "#end"},
+        "down": {"texture": "#end"}
+      }
+    }
+  ]
+}

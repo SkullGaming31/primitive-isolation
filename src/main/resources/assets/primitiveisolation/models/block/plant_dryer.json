@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "minecraft:block/barrel_side",
+    "particle": "minecraft:block/barrel_side"
+  }
+}

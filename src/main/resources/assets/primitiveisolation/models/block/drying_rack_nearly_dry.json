@@ -1,0 +1,6 @@
+{
+  "parent": "primitiveisolation:block/drying_rack",
+  "textures": {
+    "hide": "minecraft:block/brown_concrete_powder"
+  }
+}

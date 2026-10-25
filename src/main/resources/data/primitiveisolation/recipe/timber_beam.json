@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "PPP",
+    "R R"
+  ],
+  "key": {
+    "P": "#minecraft:planks",
+    "R": "primitiveisolation:rope"
+  },
+  "result": {
+    "id": "primitiveisolation:timber_beam",
+    "count": 2
+  }
+}

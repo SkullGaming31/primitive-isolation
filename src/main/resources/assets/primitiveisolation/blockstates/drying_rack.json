@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "stage=idle": {
+      "model": "primitiveisolation:block/drying_rack"
+    },
+    "stage=wet": {
+      "model": "primitiveisolation:block/drying_rack_wet"
+    },
+    "stage=partially_dry": {
+      "model": "primitiveisolation:block/drying_rack_partially_dry"
+    },
+    "stage=nearly_dry": {
+      "model": "primitiveisolation:block/drying_rack_nearly_dry"
+    },
+    "stage=ready": {
+      "model": "primitiveisolation:block/drying_rack_ready"
+    }
+  }
+}

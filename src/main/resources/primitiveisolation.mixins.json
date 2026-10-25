@@ -2,7 +2,12 @@
   "required": true,
   "package": "com.canadiendragon.primitiveisolation.mixin",
   "compatibilityLevel": "JAVA_25",
-  "mixins": [],
+  "mixins": [
+    "ServerLevelSleepMixin"
+  ],
+  "client": [
+    "SleepingMatOverlayMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   },

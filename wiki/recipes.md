@@ -6,6 +6,14 @@ This page lists the custom crafting recipes and vanilla ore-processing recipes c
 
 Use the **Knapping and Assembly Station** to shape heads and assemble tools. Head patterns must be placed in the upper-left corner of the station's 3x3 grid. In the patterns below, `F` means flint, `S` means string, and `.` means an empty slot.
 
+Craft the station with this shaped recipe (`P` means any planks):
+
+```text
+PPP
+F F
+SSS
+```
+
 ![Flint head knapping patterns](images/flint-head-recipes.svg)
 
 | Result | 3x3 pattern |
@@ -16,17 +24,17 @@ Use the **Knapping and Assembly Station** to shape heads and assemble tools. Hea
 | Flint shovel head | `F.. / S.. / ...` |
 | Flint knife head | `FS. / ... / ...` |
 
-Assemble tools shapelessly in the station:
+Assemble each tool in the station's center column. `H` is the matching tool head, `T` is string, and `S` is a stick:
 
 ![Flint tool assembly recipes](images/flint-tool-assembly.svg)
 
-| Result | Ingredients |
-| --- | --- |
-| Flint axe | 1 flint axe head, 2 sticks |
-| Flint pickaxe | 1 flint pickaxe head, 2 sticks |
-| Flint hoe | 1 flint hoe head, 2 sticks |
-| Flint shovel | 1 flint shovel head, 2 sticks |
-| Flint knife | 1 flint knife head, 1 stick |
+```text
+.H.
+.T.
+.S.
+```
+
+Use the corresponding axe, pickaxe, hoe, shovel, or knife head in the top slot. Each recipe also requires exactly 1 string and 1 stick in the positions shown.
 
 Flint tools use the same harvest tier as wooden tools and have 29 durability (wood tools have 59). Flint axes, pickaxes, hoes, and shovels retain their existing speed and attack stats.
 Log blocks only drop wood when harvested with an axe, including the flint axe.
@@ -35,17 +43,26 @@ Log blocks only drop wood when harvested with an axe, including the flint axe.
 
 Craft a **Butchery Table** with 3 planks and 4 sticks (`PPP / S.S / S.S`, where `P` is any plank and `S` is a stick).
 
-Cows, pigs, and chickens leave a ground carcass when killed. Right-click a carcass with an empty hand to pick it up as an item. To field-butcher it instead, hold a flint knife and keep using it for 30 seconds; this yields only 1 meat. Left-clicking does not harvest the carcass. Each uncollected carcass decomposes after 5 minutes, and zombies can eat carcasses over 10 seconds.
+Cows, pigs, chickens, mooshrooms, sheep, rabbits, polar bears, and hoglins leave a ground carcass when killed. Right-click a carcass with an empty hand to pick it up as an item. To field-butcher it instead, hold a flint knife and keep using it for 30 seconds; this yields less than processing it on the table. Left-clicking does not harvest the carcass. Each uncollected carcass decomposes after 5 minutes.
 
 For the larger yield, right-click the Butchery Table while holding the carcass to place it on the table. The table displays which animal is loaded. Hold right-click on the loaded table with a flint knife for 10 seconds to process it, or use an empty hand to pick it back up.
 
+JEI lists each carcass as an input at the Butchery Table. Variable yields display their possible range.
+
 | Carcass | Butchery Table yield |
 | --- | --- |
-| Cow | 3 beef, 1 leather, 1 bone |
-| Pig | 3 porkchops, 1 leather, 1 bone |
-| Chicken | 2 chicken, 1 feather, 1 bone |
+| Cow | 3 raw beef, 2 raw hide, 1 bone |
+| Pig | 3 raw pork |
+| Chicken | 2 raw chicken, 1 feather, 1 bone |
+| Mooshroom | 1–3 raw beef, 0–2 raw hide |
+| Sheep | 1–2 raw mutton |
+| Rabbit | 0–1 raw rabbit |
+| Polar bear | 1 raw fish; cod (75%) or salmon (25%), never both |
+| Hoglin | 2–4 raw pork |
 
 Items that do not fit in the player's inventory when processed are discarded.
+
+JEI also lists field butchering separately. Hold a flint knife on the matching corpse for 30 seconds; field yields are lower than table yields.
 
 ## Charcoal pit
 
@@ -68,11 +85,31 @@ Craft a **Chunk Anchor** with an Eye of Ender in the center and iron ingots in a
 
 Butchered meat is modded food. Raw meat and fish spoil after **20 minutes** and turn into rotten flesh. Vanilla loot-table drops of raw meat and fish are replaced with modded perishable versions, and existing dropped items/player inventory stacks are converted too, so vanilla cooking recipes cannot bypass spoilage. Their tooltips show the remaining time before spoilage.
 
-Craft a **Salting Rack** with 6 planks and 2 sticks (`PPP / S S / PPP`). Load up to 3 raw meat or fish pieces across the top row, put salt below them, and collect the salted food from the bottom row. It processes one piece at a time, taking **1 minute per piece** and consuming **2 salt per piece**. Fresh meat and fish spoil after **20 minutes**; salting extends that time by 1.5x, to **30 minutes**. The timer continues while food is in the rack; spoiled input is removed and rotten flesh drops beside the rack.
+Craft a **Salting Rack** with 6 planks and 2 sticks (`PPP / S S / PPP`). Load up to 3 raw meat or fish pieces across the top row, put salt below them, and collect the salted food from the bottom row. It processes one piece at a time, taking **1 minute per piece** and consuming **2 salt per piece**. JEI lists the salted-food recipes and accepts either vanilla raw foods or the modded perishable raw versions. Fresh meat and fish spoil after **20 minutes**; salting extends that time by 1.5x, to **30 minutes**. Mutton and rabbit meat can also be salted. The timer continues while food is in the rack; spoiled input is removed and rotten flesh drops beside the rack.
+
+The **Drying Rack** turns one tanned hide into leather. JEI lists this processing recipe with the rack as its station. Clear outdoor drying takes **10 minutes**; indoor drying takes **20 minutes**. Exposed rain pauses drying, and a lit campfire within 3 blocks doubles the drying rate.
+
+## Gathering wild plants
+
+Wild barley generates in plains, meadows, and savannas; wild turnips in forests and birch forests; wild berries in taigas; yarrow in meadows, flower forests, and plains; and bitterleaf in swamps, mangrove swamps, and dark forests. Harvest plants by right-clicking them. Use a **Digging Stick** to harvest wild turnips. Each gathered plant item can be planted on suitable ground to regrow that species; plants do not regrow after harvest.
+
+Craft a **Field Guide** from a book surrounded by paper. Right-click while holding it to browse identified entries with previous/next buttons. Use it on a growing plant to save its category, habitat, harvest method, raw effects, and preparation details; unidentified plant details stay hidden until recorded. Eating raw bitterleaf causes poison for 5 seconds. Yarrow restores a small amount of health and removes poison.
+
+Craft a **Plant Dryer** from planks and sticks. Place one yarrow or bitterleaf in its input slot; after **1 minute**, collect dried yarrow or prepared bitterleaf from the output. Prepared bitterleaf is safe to eat. This dryer is separate from the hide Drying Rack and does not preserve food.
 
 Smokers turn salted food into smoked food with **5x the salted timer**, or **150 minutes**. Smoked meat and fish can be stored in a **Preserving Bin**, crafted with 8 planks around a chest (`PPP / PCP / PPP`). The bin has 27 chest-style storage slots and a dedicated slot for Minecraft ice. One ice block preserves all stored perishable food for **2 hours 20 minutes**; food's remaining spoil timer is paused while the bin is chilled and resumes when its ice runs out or is removed. The bin preserves raw, salted, and smoked food according to each item's own spoil duration. Food that spoils in the bin turns into rotten flesh in its storage slot.
 
 Salt comes from natural underwater salt deposits that generate in clay-like patches on water floors. Each deposit drops 4 salt.
+
+## Woven basket
+
+Craft a **Woven Basket** with 4 sugar cane and 3 sticks (`R R / R R / SSS`). A placed basket has **7 slots** and can store food and gathered materials such as plants, sticks, and stones, in normal item stack sizes. Right-click a placed basket to open it; a basket in your inventory cannot be opened. Breaking a filled basket preserves its contents in the dropped basket item, and placing that item restores them.
+
+## Grass fiber, rope, and sleeping mat
+
+Break short grass or tall grass with a flint knife for a **1-in-8 chance** to collect 1 Grass Fiber. Each grass block harvested consumes 1 knife durability. Craft **Rope** from 3 Grass Fibers in a vertical line. Place a rope segment next to a sturdy block or another rope segment; it can then be extended downward and climbed.
+
+Craft a **Sleeping Mat** from 3 wool blocks over 3 hay bales (`WWW / HHH`; any wool color works). It is intended to be usable during the day or night and advance the world clock at 10× for testing until the next morning, without fading the screen to black or changing the player's respawn point. Vanilla beds remain limited to night. **Known bug:** daytime use currently wakes the player immediately instead of advancing time; see issue #4.
 
 | Process | Input | Output |
 | --- | --- | --- |
@@ -104,6 +141,10 @@ Furnace recipes take 200 game ticks; blast furnace recipes take 100 game ticks. 
 
 ## Miscellaneous features
 
-Lit campfires can start normal fire beside an adjacent flammable wood block. Each adjacent wooden block has an independent chance to ignite, averaging about once per minute while the campfire is lit. Keep campfires away from wooden structures.
+Craft a **Hand Drill** with 2 sticks and any plank (`S. / SP`). Hold use on an unlit campfire or charcoal pit for 5 seconds to light it; each successful use consumes durability. A hand drill cannot relight a campfire while it is exposed to rain.
+
+Right-click a log with an axe to strip it and collect 1 bark.
+
+Lit campfires exposed to rain go out and can be relit with flint and steel. Lit campfires can start normal fire beside flammable wood blocks within 2 blocks in any direction. Each nearby wooden block has an independent chance to ignite, averaging about once per minute while the campfire is lit. Keep campfires away from wooden structures.
 
 Zombies will attack cows, pigs, and chickens.

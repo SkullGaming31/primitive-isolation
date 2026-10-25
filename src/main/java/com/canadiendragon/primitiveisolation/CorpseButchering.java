@@ -16,7 +16,7 @@ import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.world.phys.Vec3;
 
 public final class CorpseButchering {
-    private static final int BUTCHERING_TIME_TICKS = 600;
+    public static final int BUTCHERING_TIME_TICKS = 600;
     private static final double BUTCHERING_RANGE_SQUARED = 25.0;
     private static final long DECOMPOSITION_TIME_TICKS = 6000L;
 
@@ -34,7 +34,6 @@ public final class CorpseButchering {
         this.butcheredDrops = butcheredDrops;
         this.decomposesAt = corpse.level().getGameTime() + DECOMPOSITION_TIME_TICKS;
         corpse.setNoAi(true);
-        corpse.setInvulnerable(true);
         corpse.setSilent(true);
         corpse.setPersistenceRequired();
     }

@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
+import com.mojang.serialization.MapCodec;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.StringRepresentable;
@@ -14,15 +16,19 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
+import org.jspecify.annotations.Nullable;
 
-public class ButcheryTableBlock extends Block {
+public class ButcheryTableBlock extends BaseEntityBlock {
+    private static final MapCodec<ButcheryTableBlock> CODEC = simpleCodec(ButcheryTableBlock::new);
     private static final int BUTCHERING_TIME_TICKS = 200;
     private static final double BUTCHERING_RANGE_SQUARED = 25.0;
     private static final Map<UUID, ButcheringSession> ACTIVE_BUTCHERING = new HashMap<>();
@@ -31,6 +37,16 @@ public class ButcheryTableBlock extends Block {
     public ButcheryTableBlock(BlockBehaviour.Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(CARCASS, CarcassType.EMPTY));
+    }
+
+    @Override
+    protected MapCodec<? extends BaseEntityBlock> codec() {
+        return CODEC;
+    }
+
+    @Override
+    public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+        return new ButcheryTableBlockEntity(pos, state);
     }
 
     @Override
@@ -163,6 +179,27 @@ public class ButcheryTableBlock extends Block {
         if (stack.is(primitiveisolation.CHICKEN_CARCASS.get())) {
             return CarcassType.CHICKEN;
         }
+        if (stack.is(primitiveisolation.MOOSHROOM_CARCASS.get())) {
+            return CarcassType.MOOSHROOM;
+        }
+        if (stack.is(primitiveisolation.SHEEP_CARCASS.get())) {
+            return CarcassType.SHEEP;
+        }
+        if (stack.is(primitiveisolation.RABBIT_CARCASS.get())) {
+            return CarcassType.RABBIT;
+        }
+        if (stack.is(primitiveisolation.POLAR_BEAR_CARCASS.get())) {
+            return CarcassType.POLAR_BEAR;
+        }
+        if (stack.is(primitiveisolation.HOGLIN_CARCASS.get())) {
+            return CarcassType.HOGLIN;
+        }
+        if (stack.is(primitiveisolation.DEER_CARCASS.get())) {
+            return CarcassType.DEER;
+        }
+        if (stack.is(primitiveisolation.MOOSE_CARCASS.get())) {
+            return CarcassType.MOOSE;
+        }
         return CarcassType.EMPTY;
     }
 
@@ -171,6 +208,13 @@ public class ButcheryTableBlock extends Block {
             case COW -> primitiveisolation.COW_CARCASS.get().getDefaultInstance();
             case PIG -> primitiveisolation.PIG_CARCASS.get().getDefaultInstance();
             case CHICKEN -> primitiveisolation.CHICKEN_CARCASS.get().getDefaultInstance();
+            case MOOSHROOM -> primitiveisolation.MOOSHROOM_CARCASS.get().getDefaultInstance();
+            case SHEEP -> primitiveisolation.SHEEP_CARCASS.get().getDefaultInstance();
+            case RABBIT -> primitiveisolation.RABBIT_CARCASS.get().getDefaultInstance();
+            case POLAR_BEAR -> primitiveisolation.POLAR_BEAR_CARCASS.get().getDefaultInstance();
+            case HOGLIN -> primitiveisolation.HOGLIN_CARCASS.get().getDefaultInstance();
+            case DEER -> primitiveisolation.DEER_CARCASS.get().getDefaultInstance();
+            case MOOSE -> primitiveisolation.MOOSE_CARCASS.get().getDefaultInstance();
             case EMPTY -> ItemStack.EMPTY;
         };
     }
@@ -180,6 +224,13 @@ public class ButcheryTableBlock extends Block {
             case COW -> primitiveisolation.cowButcheredDrops();
             case PIG -> primitiveisolation.pigButcheredDrops();
             case CHICKEN -> primitiveisolation.chickenButcheredDrops();
+            case MOOSHROOM -> primitiveisolation.mooshroomButcheredDrops();
+            case SHEEP -> primitiveisolation.sheepButcheredDrops();
+            case RABBIT -> primitiveisolation.rabbitButcheredDrops();
+            case POLAR_BEAR -> primitiveisolation.polarBearTableButcheredDrops();
+            case HOGLIN -> primitiveisolation.hoglinButcheredDrops();
+            case DEER -> primitiveisolation.deerButcheredDrops();
+            case MOOSE -> primitiveisolation.mooseButcheredDrops();
             case EMPTY -> List.of();
         };
     }
@@ -191,7 +242,14 @@ public class ButcheryTableBlock extends Block {
         EMPTY("empty"),
         COW("cow"),
         PIG("pig"),
-        CHICKEN("chicken");
+        CHICKEN("chicken"),
+        MOOSHROOM("mooshroom"),
+        SHEEP("sheep"),
+        RABBIT("rabbit"),
+        POLAR_BEAR("polar_bear"),
+        HOGLIN("hoglin"),
+        DEER("deer"),
+        MOOSE("moose");
 
         private final String name;
 

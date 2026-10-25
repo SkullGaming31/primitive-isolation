@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "primitiveisolation:block/wild_berry_plant",
+    "particle": "primitiveisolation:block/wild_berry_plant"
+  }
+}

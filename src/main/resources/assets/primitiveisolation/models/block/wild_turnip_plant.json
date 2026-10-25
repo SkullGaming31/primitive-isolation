@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "primitiveisolation:block/wild_turnip_plant",
+    "particle": "primitiveisolation:block/wild_turnip_plant"
+  }
+}

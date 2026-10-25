@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "primitiveisolation:cleaned_hide",
+    "primitiveisolation:bark"
+  ],
+  "result": {
+    "id": "primitiveisolation:tanned_hide",
+    "count": 1
+  }
+}

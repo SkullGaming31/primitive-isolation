@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "F",
+    "F",
+    "F"
+  ],
+  "key": {
+    "F": "primitiveisolation:grass_fiber"
+  },
+  "result": {
+    "id": "primitiveisolation:rope",
+    "count": 1
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "primitiveisolation:barley_grain"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.33333334
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "primitiveisolation:wild_barley"
+        }
+      ]
+    }
+  ]
+}

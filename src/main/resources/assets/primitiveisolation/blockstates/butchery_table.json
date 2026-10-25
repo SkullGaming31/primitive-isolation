@@ -4,13 +4,34 @@
       "model": "primitiveisolation:block/butchery_table"
     },
     "carcass=cow": {
-      "model": "primitiveisolation:block/butchery_table_cow"
+      "model": "primitiveisolation:block/butchery_table"
     },
     "carcass=pig": {
-      "model": "primitiveisolation:block/butchery_table_pig"
+      "model": "primitiveisolation:block/butchery_table"
     },
     "carcass=chicken": {
-      "model": "primitiveisolation:block/butchery_table_chicken"
+      "model": "primitiveisolation:block/butchery_table"
+    },
+    "carcass=mooshroom": {
+      "model": "primitiveisolation:block/butchery_table"
+    },
+    "carcass=sheep": {
+      "model": "primitiveisolation:block/butchery_table"
+    },
+    "carcass=rabbit": {
+      "model": "primitiveisolation:block/butchery_table"
+    },
+    "carcass=polar_bear": {
+      "model": "primitiveisolation:block/butchery_table"
+    },
+    "carcass=hoglin": {
+      "model": "primitiveisolation:block/butchery_table"
+    },
+    "carcass=deer": {
+      "model": "primitiveisolation:block/butchery_table"
+    },
+    "carcass=moose": {
+      "model": "primitiveisolation:block/butchery_table"
     }
   }
 }

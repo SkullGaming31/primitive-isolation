@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPP",
+    "F F",
+    "SSS"
+  ],
+  "key": {
+    "P": "#minecraft:planks",
+    "F": "minecraft:flint",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "primitiveisolation:knapping_station",
+    "count": 1
+  }
+}

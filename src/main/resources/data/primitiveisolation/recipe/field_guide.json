@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " P ",
+    "PBP",
+    " P "
+  ],
+  "key": {
+    "P": "minecraft:paper",
+    "B": "minecraft:book"
+  },
+  "result": {
+    "id": "primitiveisolation:field_guide",
+    "count": 1
+  }
+}

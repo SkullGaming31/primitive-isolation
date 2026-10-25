@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "R R",
+    "R R",
+    "SSS"
+  ],
+  "key": {
+    "R": "minecraft:sugar_cane",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "primitiveisolation:basket",
+    "count": 1
+  }
+}

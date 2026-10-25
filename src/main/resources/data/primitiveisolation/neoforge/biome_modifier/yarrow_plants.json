@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:meadow",
+    "minecraft:flower_forest",
+    "minecraft:plains"
+  ],
+  "features": "primitiveisolation:yarrow_plant",
+  "step": "vegetal_decoration"
+}

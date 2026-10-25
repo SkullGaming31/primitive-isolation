@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "primitiveisolation:block/yarrow_plant",
+    "particle": "primitiveisolation:block/yarrow_plant"
+  }
+}

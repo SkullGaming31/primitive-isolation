@@ -22,7 +22,9 @@ public class CowCorpse extends Cow {
         this.butchering = new CorpseButchering(
                 this,
                 () -> primitiveisolation.COW_CARCASS.get().getDefaultInstance(),
-                () -> List.of(new ItemStack(primitiveisolation.RAW_BEEF.get())));
+                () -> List.of(
+                        new ItemStack(primitiveisolation.RAW_BEEF.get()),
+                        new ItemStack(primitiveisolation.RAW_HIDE.get())));
         this.refreshDimensions();
     }
 

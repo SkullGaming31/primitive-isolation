@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:plains",
+    "minecraft:meadow",
+    "minecraft:savanna"
+  ],
+  "features": "primitiveisolation:wild_barley_plant",
+  "step": "vegetal_decoration"
+}

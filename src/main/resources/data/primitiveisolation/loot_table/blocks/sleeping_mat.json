@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "primitiveisolation:sleeping_mat",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "primitiveisolation:sleeping_mat",
+              "properties": {
+                "part": "head"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

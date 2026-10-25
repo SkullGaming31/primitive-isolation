@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "L",
+    "R",
+    "L"
+  ],
+  "key": {
+    "L": "#minecraft:logs",
+    "R": "primitiveisolation:rope"
+  },
+  "result": {
+    "id": "primitiveisolation:support_post",
+    "count": 2
+  }
+}
